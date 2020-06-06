@@ -3,26 +3,27 @@ extends Node2D
 onready var world = get_tree().get_root().get_node("World")
 
 var look_at_point = Vector2()
+onready var point = world.get_node("Center").transform.origin
 
 func _ready():
-	var origin = transform.get_origin()
-	look_at_point = Vector2(origin.x, origin.y)
-	#look_at(look_at_point)
 	pass
 
-func _process(delta):
-	look_at(look_at_point)
-	pass
+func _process(delta):	
+	look_at(point)
+	rotate(deg2rad(90))
+	
 	
 func _input(event):
 	if event is InputEventKey:
-		if Input.is_action_pressed("ui_up"):
-			pass
-		if Input.is_action_pressed("ui_down"):
-			pass
-			
+		if Input.is_action_pressed("ui_left"):
+			position.x -= 5
+			position.y -= 5
+		if Input.is_action_pressed("ui_right"):
+			position.x += 5
+			position.y += 5			
 
 func _draw():
-	if world.DEBUG == true:
-		#$Sprite.visible = false
-		draw_line(Vector2(), Vector2(0, -105), Color.white)
+	$Sprite.visible = true
+	pass
+		
+		
