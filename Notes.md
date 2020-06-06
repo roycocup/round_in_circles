@@ -1,6 +1,6 @@
 # Round in Circles
 
-## Mashup Jam - 6 June 2020
+[For Mashup Game Jam - 6 June 2020](https://itch.io/jam/mashup-game-jam)
 
 A combination of Super Pang and Asteroids
 
@@ -13,4 +13,30 @@ When a bubble is shot, it will split in two and reduce its size, until its small
 The smaller the bubbles are, the faster tehy move.
 The game will have a time limit for each level. 
 Levels will vary with the ship ring radius becoming bigger or smaller, and the number and speed of the bubbles. 
+
+## Todo List 
+
+[] Audio
+    [] Shot
+    [] Bubble split
+    [] Win 
+    [] Lose
+
+[] Mehanics 
+    [] Timer
+
+[] Assets
+    [] ship
+    [] background
+        [] ring
+        [] stars
+    [] Bubble
+
+[] Screens
+    [] Start game
+    [] Win
+    [] Lose
+    [] Restart
+    [] Countdown
+
 
