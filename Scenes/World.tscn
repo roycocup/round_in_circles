@@ -1,8 +1,18 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Ship.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Bubble.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/World.gd" type="Script" id=4]
 
 [node name="World" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Background" parent="." instance=ExtResource( 2 )]
 
 [node name="Ship" parent="." instance=ExtResource( 1 )]
-position = Vector2( 366, 364 )
+position = Vector2( 512, 288 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="Bubble" parent="." instance=ExtResource( 3 )]
+position = Vector2( 808, 136 )
